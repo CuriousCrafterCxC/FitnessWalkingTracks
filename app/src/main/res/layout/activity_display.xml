@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/displayTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Title:" />
+
+    <TextView
+        android:id="@+id/dispalyDistrict"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="District:" />
+
+
+    <ImageView
+        android:id="@+id/url_map_picture"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:scaleType="centerCrop"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <Button
+        android:id="@+id/GPSLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Web Page" />
+
+</LinearLayout>
