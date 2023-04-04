@@ -1,4 +1,4 @@
-package hk.edu.hkmu.contactinfo;
+package hk.edu.hkmu.fitness;
 
 import android.content.Context;
 
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
     public void useAppContext() {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        assertEquals("hk.edu.hkmu.contactinfo", appContext.getPackageName());
+        assertEquals("hk.edu.hkmu.fitness", appContext.getPackageName());
     }
 }

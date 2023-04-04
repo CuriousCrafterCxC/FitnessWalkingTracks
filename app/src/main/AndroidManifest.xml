@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="hk.edu.hkmu.contactinfo">
+    package="hk.edu.hkmu.fitness">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -10,17 +10,21 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.ContactInfo">
+        android:theme="@style/Theme.FitnessTrack">
         <activity
-            android:name=".DisplayActivity"
+            android:name="hk.edu.hkmu.fitness.DisplayActivity"
             android:exported="false"
-            android:parentActivityName=".MainActivity">
+            android:parentActivityName="hk.edu.hkmu.fitness.MainActivity">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+        <activity android:name="hk.edu.hkmu.fitness.SettingsActivity"
+            android:exported="false"
+            android:parentActivityName="hk.edu.hkmu.fitness.MainActivity">
+        </activity>
         <activity
-            android:name=".MainActivity"
+            android:name="hk.edu.hkmu.fitness.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

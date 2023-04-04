@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:orientation="vertical" >
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
     <TextView
         android:id="@+id/displayTitle"
@@ -13,7 +17,7 @@
         android:text="Title:" />
 
     <TextView
-        android:id="@+id/dispalyDistrict"
+        android:id="@+id/displayDistrict"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="District:" />
@@ -26,10 +30,23 @@
         android:scaleType="centerCrop"
         tools:srcCompat="@tools:sample/avatars" />
 
+    <TextView
+        android:id="@+id/displayRoute"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Route"/>
+
+    <TextView
+        android:id="@+id/howtoaccess"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="How to access"/>
+
     <Button
         android:id="@+id/GPSLocation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Web Page" />
 
-</LinearLayout>
+    </LinearLayout>
+</ScrollView>

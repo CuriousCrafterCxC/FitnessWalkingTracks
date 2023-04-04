@@ -1,4 +1,4 @@
-package hk.edu.hkmu.contactinfo;
+package hk.edu.hkmu.fitness;
 
 import org.junit.Test;
 

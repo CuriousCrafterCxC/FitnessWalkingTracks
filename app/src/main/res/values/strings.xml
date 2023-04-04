@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">FitnessTracks</string>
+    <string name="language">en</string>
+    <string name="setLang">Switch Language</string>
+    <string name="confirm">Confirm</string>
+    <string name="cancel">Cancel</string>
 </resources>
