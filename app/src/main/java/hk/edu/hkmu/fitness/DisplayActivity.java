@@ -36,7 +36,17 @@ public class DisplayActivity extends AppCompatActivity {
         String title = bundle.getString("title");
         String district = bundle.getString("district");
         String howtoaccess = bundle.getString("howtoaccess");
-        howtoaccess = "How to Acess: \n" + howtoaccess;
+        switch (Settings.getLang()){
+            case "en":
+                howtoaccess = "How to Acess: \n" + howtoaccess;
+                break;
+            case "sc":
+                howtoaccess = "路线： \n" + howtoaccess;
+                break;
+            case "tc":
+                howtoaccess = "途徑： \n" + howtoaccess;
+                break;
+        }
         String route = bundle.getString("route");
         String Map_image_url = bundle.getString("map_image");
 
