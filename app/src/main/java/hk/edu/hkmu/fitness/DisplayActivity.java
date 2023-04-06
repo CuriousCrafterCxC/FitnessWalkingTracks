@@ -2,7 +2,9 @@ package hk.edu.hkmu.fitness;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -36,6 +38,8 @@ public class DisplayActivity extends AppCompatActivity {
         String title = bundle.getString("title");
         String district = bundle.getString("district");
         String howtoaccess = bundle.getString("howtoaccess");
+        double latitude = bundle.getDouble("latitude");
+        double longitude = bundle.getDouble("longitude");
         switch (Settings.getLang()){
             case "en":
                 howtoaccess = "How to Acess: \n" + howtoaccess;
@@ -56,6 +60,16 @@ public class DisplayActivity extends AppCompatActivity {
         districtView.setText(district);
         routeView.setText(route);
         htaView.setText(howtoaccess);
+
+        webButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(DisplayActivity.this, MapsActivity.class);
+                i.putExtra("latitude", latitude);
+                i.putExtra("longitude", longitude);
+                startActivity(i);
+            }
+        });
 
     }
 

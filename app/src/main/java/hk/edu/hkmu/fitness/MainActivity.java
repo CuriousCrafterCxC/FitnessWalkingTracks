@@ -56,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
                     new AdapterView.OnItemClickListener() {
                         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                             HashMap<String, String> fitness = FitnessTrack.fitnessList.get(position);
+                            HashMap<String, Double> fitnessMap = FitnessTrack.fitnessListMap.get(position);
 //                            AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);// dialog creation
 //
 //                            builder.setTitle(fitness.get(FitnessTrack.TITLE));
@@ -70,6 +71,8 @@ public class MainActivity extends AppCompatActivity {
                             bundle.putString("map_image", fitness.get(FitnessTrack.MAP_URL));
                             bundle.putString("howtoaccess", fitness.get(FitnessTrack.HOW_TO_ACCESS));
                             bundle.putString("route", fitness.get(FitnessTrack.ROUTE));
+                            bundle.putDouble("latitude", fitnessMap.get(FitnessTrack.LATITUDE));
+                            bundle.putDouble("longitude", fitnessMap.get(FitnessTrack.LONGITUDE));
                             // 創建一個Intent對象，指定要啟動的Activity
                             Intent intent = new Intent(MainActivity.this, DisplayActivity.class);
 

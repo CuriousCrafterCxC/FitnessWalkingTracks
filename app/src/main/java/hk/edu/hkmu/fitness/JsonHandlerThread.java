@@ -90,9 +90,9 @@ public class JsonHandlerThread extends Thread {
                     String howtoaccess = c.getString("HowToAccess_"+lang);
                     howtoaccess = howtoaccess.replace("<br>","\n");
                     String mapURL = c.getString("MapURL_"+lang);
-//                    Double Latitude = c.getDouble("Latitude");
-//                    Double Longitude = c.getDouble("Longitude");
-                    FitnessTrack.addFitness (title, district, route, howtoaccess,mapURL);
+                    Double Latitude = c.getDouble("Latitude");
+                    Double Longitude = c.getDouble("Longitude");
+                    FitnessTrack.addFitness (title, district, route, howtoaccess, mapURL, Latitude, Longitude);
 
 
                 }
