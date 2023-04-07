@@ -86,12 +86,19 @@ public class JsonHandlerThread extends Thread {
                     String title = c.getString("Title_" + lang);
                     String district = c.getString("District_" + lang);
                     String route = c.getString("Route_"+lang);
+                    String regex = "[^0-9.]";
+                    String Lati = c.getString("Latitude");
+                    Lati = Lati.replaceAll(regex,"");
+                    String Longi = c.getString("Longitude");
+                    Longi = Longi.replaceAll(regex,"");
                     route = route.replace("<br>","\n"); //modify the route info for better expression
                     String howtoaccess = c.getString("HowToAccess_"+lang);
                     howtoaccess = howtoaccess.replace("<br>","\n");
                     String mapURL = c.getString("MapURL_"+lang);
-                    Double Latitude = c.getDouble("Latitude");
-                    Double Longitude = c.getDouble("Longitude");
+//                    Log.e(TAG,"RAW: "+ Lati + " "+ Longi);
+                    Double Latitude = Double.parseDouble(Lati);
+                    Double Longitude = Double.parseDouble(Longi);
+//                    Log.e(TAG,"Latitude: " + Latitude + "\n Longitude: " + Longitude);
                     FitnessTrack.addFitness (title, district, route, howtoaccess, mapURL, Latitude, Longitude);
 
 
